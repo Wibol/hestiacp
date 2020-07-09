@@ -1,0 +1,98 @@
+#!/bin/bash
+# info: list aliases for specific web domain
+# options: USER [FORMAT]
+#
+# The function to obtain the list of aliases for a user's
+# web domain.
+
+
+#----------------------------------------------------------#
+#                    Variable&Function                     #
+#----------------------------------------------------------#
+
+# Argument definition
+user=$1
+format=${2-shell}
+
+# Includes
+source $HESTIA/func/main.sh
+
+# JSON list function
+json_list() {
+    IFS=$'\n'
+    i=1
+    objects=$(grep DOMAIN $USER_DATA/web.conf |wc -l)
+    echo "{"
+    while read str; do
+        parse_object_kv_list "$str"
+        echo -n '    "'$DOMAIN'": {
+        "ALIAS": "'$ALIAS'",
+    }'
+        if [ "$i" -lt "$objects" ]; then
+            echo ','
+        else
+            echo
+        fi
+        ((i++))
+    done < <(cat $USER_DATA/web.conf)
+    echo '}'
+}
+
+# SHELL list function
+shell_list() {
+    IFS=$'\n'
+    echo "DOMAIN         ALIAS"
+    echo "------         -----"
+    while read str; do
+        parse_object_kv_list "$str"
+        echo "$DOMAIN $ALIAS"
+    done < <(cat $USER_DATA/web.conf)
+}
+
+# PLAIN list function
+plain_list() {
+    IFS=$'\n'
+    while read str; do
+        parse_object_kv_list "$str"
+        echo -ne "$DOMAIN\t$ALIAS"
+    done < <(cat $USER_DATA/web.conf)
+}
+
+# CSV list function
+csv_list() {
+    IFS=$'\n'
+    echo -n "DOMAIN,ALIAS"
+    while read str; do
+        parse_object_kv_list "$str"
+        echo -n "$DOMAIN,$ALIAS"
+    done < <(cat $USER_DATA/web.conf)
+}
+
+
+#----------------------------------------------------------#
+#                    Verifications                         #
+#----------------------------------------------------------#
+
+check_args '1' "$#" 'USER [FORMAT]'
+is_format_valid 'user'
+is_object_valid 'user' 'USER' "$user"
+
+
+#----------------------------------------------------------#
+#                       Action                             #
+#----------------------------------------------------------#
+
+# Listing data
+case $format in
+    json)   json_list ;;
+    plain)  plain_list ;;
+    csv)    csv_list ;;
+    shell)  shell_list |column -t ;;
+esac
+
+
+#----------------------------------------------------------#
+#                       Hestia                             #
+#----------------------------------------------------------#
+
+exit
