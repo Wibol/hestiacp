@@ -847,34 +847,46 @@ $LANG['de'] = array(
     '2FA Reset Code' => 'Kontowiederherstellungscode',
     'Invalid or missing token' => 'Ungültiger oder fehlender Kontowiederherstellungscode',  
     
-        //list user 
+    //list user 
     'Name' => 'Name',
     //Add / Edit user
     'Contact' => 'Name',
-    'GREETINGS_GORDON' => "Hello, %s,\n",
+    'GREETINGS_GORDON' => "Hallo, %s,\n",
     
     //List Mail Accounts
-    'Forwarding' => 'Forwarding',
+    'Forwarding' => 'Weiterleitung',
 
     //Cron Jobs
     'Cron Job' => 'Cron Job',
     //Edit server 
-    'Host' => 'Host',
+    'Host' => 'Gastgeber',
   
       //list Backups
-    '1 backups' => '1 backups',
-    '%s backups' => '%s backups',
+    '1 backups' => '1 Backups',
+    '%s backups' => '%s Backups',
     //list Firewall Rules
-    '1 firewall rule' => '1 firewall rule',
-    '%s firewall rules' => '%s firewall rules',
+    '1 firewall rule' => '1 Firewall-Regel',
+    '%s firewall rules' => '%s Firewall-Regeln',
     //list ip
-    '1 banned IP address' => '1 banned IP address',
-    '%s banned IP addresses' => '%s banned IP addresses', 
+    '1 banned IP address' => '1 gesperrte IP-Adresse',
+    '%s banned IP addresses' => '%s gesperrte IP-Adressen', 
     //list DNS
-    'Records_DNS' => 'Records',
+    'Records_DNS' => 'Aufzeichnungen',
     //Dowload Backup
-    'BACKUP_DOWNLOAD_SCHEDULED' => 'Download for Backup has been scheduled.',
+    'BACKUP_DOWNLOAD_SCHEDULED' => 'Der Download der Remote-Sicherungsdatei wurde geplant.',
     
-    'backend server' =>  'Backend Server',
+    'backend server' =>  'Backend-Server',
+
+    // Notifications
+    'Notifications' => 'Benachrichtigungen',
     
+    // Help
+    'Help' => 'Help',
+    'Documentation' => 'Documentation',
+    'Support' => 'Support',
+    'Submit an issue report' => 'Submit an issue report',
+
+    'SYSTEM_UPGRADE_SEND_NOTIFICATION_EMAIL' => 'Senden Sie eine E-Mail-Benachrichtigung, wenn ein Update installiert wurde',
+    'SYSTEM_UPGRADE_SAVE_LOG' => 'Speichern Sie das Update-Installationsprotokoll',
+    'SYSTEM_UPGRADE_SEND_EMAIL_LOG' => 'Senden Sie das Update-Installationsprotokoll per E-Mail',
 );

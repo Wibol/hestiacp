@@ -876,8 +876,22 @@ $LANG['da'] = array(
     //list DNS
     'Records_DNS' => 'Records',
     //Dowload Backup
-    'BACKUP_DOWNLOAD_SCHEDULED' => 'Download for Backup has been scheduled.',
+    'BACKUP_DOWNLOAD_SCHEDULED' => 'Download of remote backup file has been scheduled.',
     'backend server' =>  'Backend Server',
     'traffic' => 'Traffic',
+    'disk' => 'Disk',
+
+    // Notifications
+    'Notifications' => 'Notifications',
+    
+    // Help
+    'Help' => 'Help',
+    'Documentation' => 'Documentation',
+    'Support' => 'Support',
+    'Submit an issue report' => 'Submit an issue report',
     'disk' => 'Disk',    
+
+    'SYSTEM_UPGRADE_SEND_NOTIFICATION_EMAIL' => 'Send e-mail-meddelelse, når en opdatering er installeret',
+    'SYSTEM_UPGRADE_SAVE_LOG' => 'Gem opdateringsinstallationslog',
+    'SYSTEM_UPGRADE_SEND_EMAIL_LOG' => 'Send opdateringsinstallationslogg via e-mail',
 );

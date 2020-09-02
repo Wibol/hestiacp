@@ -878,8 +878,21 @@ $LANG['th'] = array(
     //list DNS
     'Records_DNS' => 'Records',
     //Dowload Backup
-    'BACKUP_DOWNLOAD_SCHEDULED' => 'Download for Backup has been scheduled.',
+    'BACKUP_DOWNLOAD_SCHEDULED' => 'Download of remote backup file has been scheduled.',
     'backend server' =>  'Backend Server',
     'traffic' => 'Traffic',
     'disk' => 'Disk',
+
+    // Notifications
+    'Notifications' => 'Notifications',
+    
+    // Help
+    'Help' => 'Help',
+    'Documentation' => 'Documentation',
+    'Support' => 'Support',
+    'Submit an issue report' => 'Submit an issue report',
+
+    'SYSTEM_UPGRADE_SEND_NOTIFICATION_EMAIL' => 'ส่งอีเมลแจ้งเตือนเมื่อมีการติดตั้งการอัปเดต',
+    'SYSTEM_UPGRADE_SAVE_LOG' => 'บันทึกบันทึกการติดตั้งการอัพเดท',
+    'SYSTEM_UPGRADE_SEND_EMAIL_LOG' => 'ส่งบันทึกการติดตั้งการอัปเดตทางอีเมล',
 );

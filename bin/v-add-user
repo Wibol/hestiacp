@@ -102,14 +102,16 @@ mkdir $HOMEDIR/$user/.config \
       $HOMEDIR/$user/.cache \
       $HOMEDIR/$user/.local \
       $HOMEDIR/$user/.composer \
-      $HOMEDIR/$user/.ssh
+      $HOMEDIR/$user/.ssh \
+      $HOMEDIR/$user/.npm
 
 chown $user:$user \
       $HOMEDIR/$user/.config \
       $HOMEDIR/$user/.cache \
       $HOMEDIR/$user/.local \
       $HOMEDIR/$user/.composer \
-      $HOMEDIR/$user/.ssh
+      $HOMEDIR/$user/.ssh \
+      $HOMEDIR/$user/.npm
 
 # Set permissions
 chmod a+x $HOMEDIR/$user
@@ -183,6 +185,9 @@ CONTACT='$email'
 CRON_REPORTS='yes'
 MD5='$(awk -v user=$user -F : 'user == $1 {print $2}' /etc/shadow)'
 RKEY='$(generate_password)'
+TWOFA=''
+QRCODE=''
+PHPCLI=''
 SUSPENDED='no'
 SUSPENDED_USERS='0'
 SUSPENDED_WEB='0'

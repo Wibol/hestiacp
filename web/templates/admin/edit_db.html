@@ -68,6 +68,7 @@
                             <tr>
                                 <td class="vst-text input-label">
                                     <?php print __('User');?>
+                                    <?php echo "&nbsp;&nbsp;&nbsp;&nbsp;<em><small>(".__('maximum characters length, including prefix', 32).")</small></em>"; ?>
                                 </td>
                             </tr>
                             <tr>
@@ -83,7 +84,18 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="text" size="20" class="vst-input password" name="v_password" value="<?=htmlentities(trim($v_password, "'"))?>">
+                                    <input type="text" size="20" class="vst-input password" name="v_password" value="<?=htmlentities(trim($v_password, "'"))?>"><br />
+                                    <meter max="4" id="meter"></meter>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="vst-text">
+                                    <?php print __('Your password must have at least');?>
+                                    <ul>
+                                        <li><?php print __('8 characters long');?></li>
+                                        <li><?php print __('1 uppercase & 1 lowercase character');?></li>
+                                        <li><?php print __('1 number');?></li>
+                                    </ul>
                                 </td>
                             </tr>
                             <tr>
@@ -123,8 +135,12 @@
             </table>
         </form>
     </div>
-
+    <?php if ($v_type == 'pgsql'){
+        $user=strtolower($user);
+    }
+    ?>
     <script>
         GLOBAL.DB_USER_PREFIX = <?=json_encode($user.'_')?>;
         GLOBAL.DB_DBNAME_PREFIX = <?=json_encode($user.'_')?>;
     </script>
+

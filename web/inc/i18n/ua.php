@@ -848,6 +848,19 @@ $LANG['ua'] = array(
     //list DNS
     'Records_DNS' => 'Records',
     //Dowload Backup
-    'BACKUP_DOWNLOAD_SCHEDULED' => 'Download for Backup has been scheduled.',
+    'BACKUP_DOWNLOAD_SCHEDULED' => 'Download of remote backup file has been scheduled.',
     'backend server' =>  'Backend Server',
+
+    // Notifications
+    'Notifications' => 'Notifications',
+    
+    // Help
+    'Help' => 'Help',
+    'Documentation' => 'Documentation',
+    'Support' => 'Support',
+    'Submit an issue report' => 'Submit an issue report',
+
+    'SYSTEM_UPGRADE_SEND_NOTIFICATION_EMAIL' => 'Send email notification when an update has been installed',
+    'SYSTEM_UPGRADE_SAVE_LOG' => 'Save update installation log',
+    'SYSTEM_UPGRADE_SEND_EMAIL_LOG' => 'Send update installation log by email',
 );

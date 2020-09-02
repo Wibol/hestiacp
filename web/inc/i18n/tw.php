@@ -876,8 +876,21 @@ $LANG['tw'] = array(
     //list DNS
     'Records_DNS' => 'Records',
     //Dowload Backup
-    'BACKUP_DOWNLOAD_SCHEDULED' => 'Download for Backup has been scheduled.',
+    'BACKUP_DOWNLOAD_SCHEDULED' => 'Download of remote backup file has been scheduled.',
     'backend server' =>  'Backend Server',
     'traffic' => 'Traffic',
     'disk' => 'Disk',
+
+    // Notifications
+    'Notifications' => 'Notifications',
+    
+    // Help
+    'Help' => 'Help',
+    'Documentation' => 'Documentation',
+    'Support' => 'Support',
+    'Submit an issue report' => 'Submit an issue report',
+
+    'SYSTEM_UPGRADE_SEND_NOTIFICATION_EMAIL' => '安裝更新後發送電子郵件通知',
+    'SYSTEM_UPGRADE_SAVE_LOG' => '保存更新安裝日誌',
+    'SYSTEM_UPGRADE_SEND_EMAIL_LOG' => '通過電子郵件發送更新安裝日誌',
 );

@@ -875,8 +875,21 @@ $LANG['ko'] = array(
     //list DNS
     'Records_DNS' => 'Records',
     //Dowload Backup
-    'BACKUP_DOWNLOAD_SCHEDULED' => 'Download for Backup has been scheduled.',
+    'BACKUP_DOWNLOAD_SCHEDULED' => 'Download of remote backup file has been scheduled.',
     'backend server' =>  'Backend Server',
     'traffic' => 'Traffic',
     'disk' => 'Disk',
+
+    // Notifications
+    'Notifications' => 'Notifications',
+    
+    // Help
+    'Help' => 'Help',
+    'Documentation' => 'Documentation',
+    'Support' => 'Support',
+    'Submit an issue report' => 'Submit an issue report',
+
+    'SYSTEM_UPGRADE_SEND_NOTIFICATION_EMAIL' => '업데이트가 설치되면 이메일 알림 보내기',
+    'SYSTEM_UPGRADE_SAVE_LOG' => '업데이트 설치 로그 저장',
+    'SYSTEM_UPGRADE_SEND_EMAIL_LOG' => '이메일로 업데이트 설치 로그 보내기',
 );
